@@ -8,14 +8,6 @@
             <array>
                 <dict>
                     <key>Comment</key>
-                    <string>Disable Broadcom card during sleep</string>
-                    <key>Enabled</key>
-                    <false/>
-                    <key>Path</key>
-                    <string>SSDT-ARPT.aml</string>
-                </dict>
-                <dict>
-                    <key>Comment</key>
                     <string>Disable Thunderbolt</string>
                     <key>Enabled</key>
                     <false/>
@@ -144,11 +136,11 @@
                 </dict>
                 <dict>
                     <key>Comment</key>
-                    <string></string>
+                    <string>Rename PXSX to ARPT</string>
                     <key>Enabled</key>
                     <true/>
                     <key>Path</key>
-                    <string>DMAR.aml</string>
+                    <string>SSDT-ARPT.aml</string>
                 </dict>
             </array>
             <key>Delete</key>
@@ -890,15 +882,6 @@
                     <key>acpi-wake-type</key>
                     <data>AQAAAA==</data>
                 </dict>
-                <key>PciRoot(0x0)/Pci(0x1C,0x6)/Pci(0x0,0x0)</key>
-                <dict>
-                    <key>compatible</key>
-                    <string>pci14e4,43a0</string>
-                    <key>device-id</key>
-                    <data>aEMAAA==</data>
-                    <key>model</key>
-                    <string>Broadcom BCM94360NG</string>
-                </dict>
                 <key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
                 <dict>
                     <key>AAPL,slot-name</key>
@@ -1086,7 +1069,7 @@
                     <key>BundlePath</key>
                     <string>VoodooPS2Controller.kext/Contents/PlugIns/VoodooPS2Mouse.kext</string>
                     <key>Comment</key>
-                    <string>V2.3.7</string>
+                    <string>V2.3.6</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -1598,7 +1581,61 @@
                     <key>MaxKernel</key>
                     <string></string>
                     <key>MinKernel</key>
+                    <string>23.0.0</string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>Any</string>
+                    <key>BundlePath</key>
+                    <string>IOSkywalkFamily.kext</string>
+                    <key>Comment</key>
+                    <string>V1.0</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/IOSkywalkFamily</string>
+                    <key>MaxKernel</key>
                     <string></string>
+                    <key>MinKernel</key>
+                    <string>23.0.0</string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>Any</string>
+                    <key>BundlePath</key>
+                    <string>IO80211FamilyLegacy.kext</string>
+                    <key>Comment</key>
+                    <string>V1200.12.2b1</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/IO80211FamilyLegacy</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string>23.0.0</string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>Any</string>
+                    <key>BundlePath</key>
+                    <string>IO80211FamilyLegacy.kext/Contents/PlugIns/AirPortBrcmNIC.kext</string>
+                    <key>Comment</key>
+                    <string>V1400.1.1</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/AirPortBrcmNIC</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string>23.0.0</string>
                     <key>PlistPath</key>
                     <string>Contents/Info.plist</string>
                 </dict>
@@ -1955,7 +1992,7 @@
                 <key>CustomSMBIOSGuid</key>
                 <false/>
                 <key>DisableIoMapper</key>
-                <true/>
+                <false/>
                 <key>DisableIoMapperMapping</key>
                 <false/>
                 <key>DisableLinkeditJettison</key>
@@ -2473,8 +2510,6 @@
                 <array>
                     <string>boot-args</string>
                     <string>ForceDisplayRotationInEFI</string>
-                    <string>bluetoothExternalDongleFailed</string>
-                    <string>bluetoothInternalControllerInfo</string>
                 </array>
             </dict>
             <key>LegacyOverwrite</key>
